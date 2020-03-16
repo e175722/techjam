@@ -1,0 +1,25 @@
+version: '3.7'
+services:
+    mysql:
+        image: mysql:5.7.10
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+        ports:
+            - '3306:3306'
+        volumes:
+            - mysql-data:/var/lib/mysql
+
+
+    web:
+        build: .
+        command: python manage.py runserver 0.0.0.0:8000
+        volumes:
+            - .:/code
+        ports:
+            - "8000:8000"
+        depends_on:
+            - mysql
+
+volumes:
+    mysql-data:
+        driver: local
