@@ -2,9 +2,9 @@ version: '3'
 services:
     mysql:
         image: mysql:5.7
-        environment: 
+        environment:
             MYSQL_DATABASE: techjam
-            MYSQL_USER: root
+            MYSQL_USER: admin
             MYSQL_PASSWORD: passw0rd
             MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
         ports:
@@ -21,7 +21,7 @@ services:
         - "8000:8000"
         links:
         - mysql
-    
+
 volumes:
     mysql-data:
         driver: local
