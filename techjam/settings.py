@@ -27,10 +27,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = [
+    'django_mysql', #JSON入れるために必要
+    'webapp.apps.WebappConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
