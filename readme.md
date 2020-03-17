@@ -17,7 +17,7 @@ localhost:8000/webapp
 localhost:8000/admin  
 などとurlを打ち込んでページを閲覧できる
 
-#setup
+# Setup
 ```
 $ docker-compose build  
 $ docker-compose up -d  
