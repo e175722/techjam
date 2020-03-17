@@ -1,0 +1,9 @@
+{% extends 'webapp/base.html' %}
+
+{% block content %}
+
+{% for employee in employee_list %}
+<h1>{{employee.name}}</h1>
+{% endfor %}
+
+{% endblock %}
