@@ -6,38 +6,35 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-4  img-hidden">eature/createForm
-      <img class="card-img-top" src="/static/image/profile/{{employee.employee_id}}/1.jpg" width="400" height="266">
+    <div class="col-md-4  img-hidden">
+      <img class="card-img-top" src="/static/image/profile/{{employee.employee_id}}/1.jpg" alt="img">
     </div>
     <div class="col-md-8">
       <h1>{{employee.name}}</h1>
        <h2>{{employee.department}}</h2>
-      <p>{{employee.introduction.1}}</p>
       <p>{{employee.mail}}</p>
+      {% if employee.introduction_1 %}
       <h2>タグ</h2>
-      {% for tag in employee.tag %}
-      {% for key,value in tagById.items %}
-      {% ifequal key tag %}
-      <p>{{value}}</p>
-      {% endifequal %}
-      {% endfor %}
-      {% endfor %}
+      <p>{{employee.tag}}</p>
+      {% endif %}
 
-      <h2>紹介文</h2>
-      {% for introduction in employee.introduction %}
-      {% for key,value in IntroductionCategoryById.items %}
-      {% ifequal key introduction.category_id %}
-      <p>{{introduction.category_id}}</p>
-      <p>{{value}}</p>
-      <p>{{introduction.text | linebreaksbr | linebreaks}}</p>
-      {% endifequal %}
-      {% endfor %}
-      {% endfor %}
+
+      {% if employee.introduction_1 %}
+      <h2>社歴</h2>
+      <p>{{employee.introduction_1 | linebreaksbr | linebreaks}}</p>
+      {% endif %}
+      {% if employee.introduction_2 %}
+      <h2>アピール</h2>
+      <p>{{employee.introduction_2 | linebreaksbr | linebreaks}}</p>
+      {% endif %}
+      {% if employee.introduction_3 %}
+      <h2>目標</h2>
+      <p>{{employee.introduction_3 | linebreaksbr | linebreaks}}</p>
+      {% endif %}
     </div>
   </div>
 </div>
 
-<p class="text-center"><a href="{% url 'webapp:index'%}"><button type="button" class="btn btn-primary">TOPへ</button></a></p>
 
 
 {% endblock %}
