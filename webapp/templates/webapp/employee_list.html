@@ -2,7 +2,6 @@
 
 {% block content %}
 
-<<<<<<< HEAD
 <!--<div class="bg-success">-->
 <div class="container">
     <div class="row o-3column">
@@ -31,67 +30,15 @@
 <!-- 前の部分へ -->
 {% if page_obj.has_previous %}
 <p class="text-center"><a href="?page={{page_obj.previous_page_number}}">前へ</a></p>
-=======
-{% load staticfiles %}
-
-<!--
-<table class="table">
-  <thead>
-    <tr>
-      <th>id</th>
-      <th>名前</th>
-    </tr>
-  </thead>
-  <tbody>
-{% for employee in employee_list %}
-<tr>
-  <td><a href="{% url 'webapp:detail' employee.pk %}">{{employee.id}}</a></td>
-  <td>{{employee.name}}</td>
-</tr>
-{% endfor %}
-</tbody>
-</table>
--->
-
-<div class="container">
-    <div class="row o-3column">
-        {% for employee in employee_list %}
-        <div class="col-md-4">
-          <div class="py-5">
-            <div class="box">
-                <div class="card">
-                    <div class="card-body">
-                      <tr>
-                        <a href="{% url 'webapp:detail' employee.pk %}"><h5 class="card-title"><td>{{employee.id}}</td></a></h5></a>
-                        <p class="card-text"><td>{{employee.name}}</td></p>
-                      </tr>
-                    </div>
-                </div>
-            </div>
-          </div>
-        </div>
-        {% endfor %}
-    </div>
-</div>
-<!-- 前の部分へ -->
-{% if page_obj.has_previous %}
-<a href="?page={{page_obj.previous_page_number}}">前へ</a>
->>>>>>> 7be2f981289edbdaffbe5a6d4efd379294cc4125
 {% endif %}
 
 <!-- 次へ部分へ -->
 {% if page_obj.has_next %}
-<<<<<<< HEAD
-<p class="text-center"><a href="?page={{page_obj.next_page_number}}">次へ</a></p>
 <p class="text-center"><a href="?page={{page_obj.next_page_number}}"><button type="button" class="btn btn-primary">></button></a></p>
 {% endif %}
 
 <br>
 <br>
-<br>
-=======
-<a href="?page={{page_obj.next_page_number}}">次へ</a>
-{% endif %}
->>>>>>> 7be2f981289edbdaffbe5a6d4efd379294cc4125
+
 
 {% endblock %}

@@ -194,13 +194,7 @@ tags
 
 
 .env
-<<<<<<< HEAD
 .envrc
 
 webapp/static/image/*
-=======
-
-webapp/static/image/*
-
 techjam/settings.py
->>>>>>> 7be2f981289edbdaffbe5a6d4efd379294cc4125
