@@ -1,7 +1,6 @@
 {% extends 'webapp/base.html' %}
 
 {% block content %}
-
 <!--<div class="bg-success">-->
 <div class="container">
   <div class="row o-3column">
@@ -10,14 +9,16 @@
       <div class="col-md-4">
           <div class="py-5">
               <div class="box">
+                <div class="shadow p-3 mb-5 bg-light rounded">
                   <div class="card">
                       <div class="card-body">
-                          <a href="{% url 'webapp:detail' employee.pk %}"><img class="card-img-top" src="/static/image/profile/{{employee.employee_id}}/1.jpg"></a>
+                          <a href="{% url 'webapp:detail' employee.pk %}"><img class="card-img-top" src="/static/image/profile/{{employee.employee_id}}/1.jpg" width="300" height="200"></a>
                           <h5 class="card-title">{{employee.name}}</h5>
                           <p class="card-text">{{employee.department}}</p>
                           <a href="{{employee.mail}}"><p class="card-text"><small class="text-muted">{{employee.mail}}</small></p></a>
                       </div>
                   </div>
+                </div>
               </div>
           </div>
       </div>
@@ -29,7 +30,7 @@
 
 <!-- 前の部分へ -->
 {% if page_obj.has_previous %}
-<p class="text-center"><a href="?page={{page_obj.previous_page_number}}">前へ</a></p>
+<p class="text-center"><a href="?page={{page_obj.previous_page_number}}"><button type="button" class="btn btn-primary"><</button></a></p>
 {% endif %}
 
 <!-- 次へ部分へ -->
