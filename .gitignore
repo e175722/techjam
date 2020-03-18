@@ -194,7 +194,7 @@ tags
 
 
 .env
+.envrc
 
 webapp/static/image/*
-
 techjam/settings.py
