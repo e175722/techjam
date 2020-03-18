@@ -1,0 +1,41 @@
+{% extends 'webapp/base.html' %}
+
+{% block content %}
+
+{% load staticfiles %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4  img-hidden">
+      <img src="{% static 'image/インターン用_八木写真.png' %}" alt="img" class="img-fulied">
+    </div>
+    <div class="col-md-8">
+      <h1>{{employee.name}}</h1>
+       <h2>{{employee.department}}</h2>
+      <p>{{employee.introduction.1}}</p>
+      <h2>タグ</h2>
+      {% for tag in employee.tag %}
+      {% for key,value in tagById.items %}
+      {% ifequal key tag %}
+      <p>{{value}}</p>
+      {% endifequal %}
+      {% endfor %}
+      {% endfor %}
+
+      <h2>紹介文</h2>
+      {% for introduction in employee.introduction %}
+      {% for key,value in IntroductionCategoryById.items %}
+      {% ifequal key introduction.category_id %}
+      <p>{{introduction.category_id}}</p>
+      <p>{{value}}</p>
+      <p>{{introduction.text}}</p>
+      {% endifequal %}
+      {% endfor %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock %}

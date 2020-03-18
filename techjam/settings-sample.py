@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '!ja!cx%tnklbi@95r9r^!(f7g3qpxq#zqdsp!c^avnn$#zbmdr'
+SECRET_KEY = "key-sample"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -84,28 +84,19 @@ DATABASES = {
 '''
 
 
-#pymysql.install_as_MySQLdb()
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': os.environ['DATABASE_NAME'],
-#         'USER': os.environ['DATABASE_USER'],
-#         'PASSWORD': os.environ['DATABASE_PASSWORD'],
-#         'HOST': os.environ['DATABASE_HOST'],
-#         'PORT': os.environ['DATABASE_PORT'],
-#     }
-# }
 
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'techjam',
-        'USER': 'admin',
-        'PASSWORD': 'passw0rd',
-        'HOST': 'mysql',
+        'USER': 'user-sample',
+        'PASSWORD': 'pass-sample',
+        'HOST': 'host-sample',
         'PORT': 3306,
+        'OPTIONS': {
+            'charset': 'utf8mb4',
+        }
     }
 }
 
