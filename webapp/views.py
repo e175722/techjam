@@ -7,7 +7,7 @@ from .models import Employee, Admin, TagCategory, IntroductionCategory
 # Create your views here.
 class IndexView(generic.ListView):
     model = Employee
-    paginate_by = 9
+    paginate_by = 6
 
 
 class DetailView(generic.DetailView):
