@@ -194,5 +194,6 @@ tags
 
 
 .env
+.envrc
 
 webapp/static/image/*
