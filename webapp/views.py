@@ -18,7 +18,6 @@ class IndexView(generic.ListView):
 
 class DetailView(generic.DetailView):
     model = Employee
-    #tags = TagCategory.objects.filter(tag_id__exact=1).all()
 
     def get_context_data(self, **kwargs):
         IntroductionsCategories = IntroductionCategory.objects.all()
