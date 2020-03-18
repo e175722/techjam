@@ -22,8 +22,8 @@ class Admin(Model,models.Model):
 
 
 class TagCategory(Model,models.Model):
-    tag_id = JSONField('タグ')
-    category = JSONField('タグ')
+    tag_id = models.IntegerField('タグid')
+    category = models.CharField('タグ名前',max_length=255)
 
 class IntroductionCategory(Model,models.Model):
     category_id = models.IntegerField('カテゴリーid')

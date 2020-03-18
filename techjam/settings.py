@@ -102,10 +102,13 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'techjam',
-        'USER': 'admin',
-        'PASSWORD': 'passw0rd',
-        'HOST': 'mysql',
+        'USER': 'kuina',
+        'PASSWORD': 'Kei31({la.(3+b(b',
+        'HOST': '52.196.164.155',
         'PORT': 3306,
+        'OPTIONS': {
+            'charset': 'utf8mb4',
+        }
     }
 }
 
