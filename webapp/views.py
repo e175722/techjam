@@ -5,12 +5,6 @@ from django.views import generic
 from .models import Employee, Admin, TagCategory, IntroductionCategory
 
 # Create your views here.
-'''
-class IndexView(generic.ListView):
-    model = Day
-    paginate_by = 3
-'''
-
 class IndexView(generic.ListView):
     model = Employee
-    paginate_by = 3
+    paginate_by = 9

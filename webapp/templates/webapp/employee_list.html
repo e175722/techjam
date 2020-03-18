@@ -2,8 +2,44 @@
 
 {% block content %}
 
-{% for employee in employee_list %}
-<h1>{{employee.name}}</h1>
-{% endfor %}
+<!--<div class="bg-success">-->
+<div class="container">
+    <div class="row o-3column">
+        {% for employee in employee_list %}
+        <tr>
+        <div class="col-md-4">
+            <div class="py-5">
+                <div class="box">
+                    <div class="card">
+                        <div class="card-body">
+                            <a href="base.html"><img class="card-img-top" src="/static/image/profile/{{employee.employee_id}}/1.jpg"></a>
+                            <h5 class="card-title">{{employee.name}}</h5>
+                            <p class="card-text">{{employee.department}}</p>
+                            <a href="{{employee.mail}}"><p class="card-text"><small class="text-muted">{{employee.mail}}</small></p></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </tr>
+        {% endfor %}
+    </div>
+</div>
+<!--</div>-->
+
+<!-- 前の部分へ -->
+{% if page_obj.has_previous %}
+<p class="text-center"><a href="?page={{page_obj.previous_page_number}}">前へ</a></p>
+{% endif %}
+
+<!-- 次へ部分へ -->
+{% if page_obj.has_next %}
+<p class="text-center"><a href="?page={{page_obj.next_page_number}}">次へ</a></p>
+<p class="text-center"><a href="?page={{page_obj.next_page_number}}"><button type="button" class="btn btn-primary">></button></a></p>
+{% endif %}
+
+<br>
+<br>
+<br>
 
 {% endblock %}

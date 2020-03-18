@@ -4,7 +4,7 @@ services:
         image: mysql:5.7
         environment:
             MYSQL_DATABASE: techjam
-            MYSQL_USER: admin
+            MYSQL_USER: root
             MYSQL_PASSWORD: passw0rd
             MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
         ports:
