@@ -6,8 +6,8 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-4  img-hidden">
-      <img class="card-img-top" src="/static/image/profile/{{employee.employee_id}}/1.jpg" alt="img">
+    <div class="col-md-4  img-hidden">eature/createForm
+      <img class="card-img-top" src="/static/image/profile/{{employee.employee_id}}/1.jpg" width="400" height="266">
     </div>
     <div class="col-md-8">
       <h1>{{employee.name}}</h1>
@@ -37,6 +37,7 @@
   </div>
 </div>
 
+<p class="text-center"><a href="{% url 'webapp:index'%}"><button type="button" class="btn btn-primary">TOPへ</button></a></p>
 
 
 {% endblock %}
