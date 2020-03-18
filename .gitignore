@@ -194,3 +194,5 @@ tags
 
 
 .env
+
+webapp/static/image/*
