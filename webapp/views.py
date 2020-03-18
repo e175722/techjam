@@ -35,17 +35,6 @@ class DetailView(generic.DetailView):
         return context
 
 
-'''
-s
-def form_upload(request):
-    form = UploadForm(request.POST, request.FILES)
-    if request.method == 'POST' and form.is_valid():
-        form.save()
-        return redirect('webapp:index')
-    else:
-        form = UploadForm()
-        return render(request,'webapp/add_employee.html', {'form': form})
-'''
 
 def form_upload(request):
     form = UploadForm(request.POST, request.FILES)
@@ -55,3 +44,15 @@ def form_upload(request):
     else:
         form = UploadForm()
         return render(request,'webapp/add_employee.html', {'form': form})
+
+
+'''
+def form_upload(request):
+    form = UploadForm(request.POST, request.FILES)
+    if request.method == 'POST' and form.is_valid():
+        form.save()
+        return redirect('webapp:index')
+    else:
+        form = UploadForm()
+        return render(request,'webapp/add_employee.html', {'form': form})
+'''

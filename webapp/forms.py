@@ -8,13 +8,14 @@ class UploadForm(forms.ModelForm):
         fields = ('title', 'uploadplace', )
 '''
 
-'''
+
 class UploadForm(forms.ModelForm):
     class Meta:
         model = Employee
         fields = '__all__'
-'''
 
+
+'''
 class UploadForm(forms.Form):
     user_type = forms.ChoiceField(label=u'会員タイプ', choices=[], widget=forms.RadioSelect())
     def __init__(self, gender, **kwargs):
@@ -26,3 +27,4 @@ class UploadForm(forms.Form):
             self.fields['user_type'].choices = [('c', 'C'), ('d', 'D'), ('e', 'E')]
             # ついでに性別が男性以外ならメールマガジンを購読するかどうかも聞くことにしよう
             self.fields['mail_magazine'] = forms.BooleanField(label=u'メルマガ購読', widget=forms.CheckboxInput())
+'''
