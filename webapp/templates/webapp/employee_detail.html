@@ -6,13 +6,14 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-4  img-hidden">
+    <div class="col-md-4  img-hidden">eature/createForm
       <img class="card-img-top" src="/static/image/profile/{{employee.employee_id}}/1.jpg" width="400" height="266">
     </div>
     <div class="col-md-8">
       <h1>{{employee.name}}</h1>
        <h2>{{employee.department}}</h2>
       <p>{{employee.introduction.1}}</p>
+      <p>{{employee.mail}}</p>
       <h2>タグ</h2>
       {% for tag in employee.tag %}
       {% for key,value in tagById.items %}
@@ -28,7 +29,7 @@
       {% ifequal key introduction.category_id %}
       <p>{{introduction.category_id}}</p>
       <p>{{value}}</p>
-      <p>{{introduction.text}}</p>
+      <p>{{introduction.text | linebreaksbr | linebreaks}}</p>
       {% endifequal %}
       {% endfor %}
       {% endfor %}
