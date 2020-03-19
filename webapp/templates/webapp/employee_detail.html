@@ -6,33 +6,45 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-4  img-hidden">
-      <img class="card-img-top" src="/static/image/profile/{{employee.employee_id}}/1.jpg" alt="img">
-    </div>
-    <div class="col-md-8">
-      <h1>{{employee.name}}</h1>
-       <h2>{{employee.department}}</h2>
-      <p>{{employee.mail}}</p>
-      {% if employee.introduction_1 %}
-      <h2>タグ</h2>
-      <p>{{employee.tag}}</p>
-      {% endif %}
-
-
-      {% if employee.introduction_1 %}
-      <h2>社歴</h2>
-      <p>{{employee.introduction_1 | linebreaksbr | linebreaks}}</p>
-      {% endif %}
-      {% if employee.introduction_2 %}
-      <h2>アピール</h2>
-      <p>{{employee.introduction_2 | linebreaksbr | linebreaks}}</p>
-      {% endif %}
-      {% if employee.introduction_3 %}
-      <h2>目標</h2>
-      <p>{{employee.introduction_3 | linebreaksbr | linebreaks}}</p>
-      {% endif %}
+    <div class="col-md-10  col-md-offset-1">
+      <img class="card-img-top" src="/static/image/profile/{{employee.employee_id}}/1.jpg" class="mw-100" alt="">
     </div>
   </div>
+  <div class="row" class="py-2">
+    <h1><p class="text-center">{{employee.name}}</p></h1>
+  </div>
+  <div class="row" class="py-1">
+    <h2>{{employee.department}}</h2>
+  </div>
+  <div class="row" class="py-1">
+    {% if employee.tag %}
+    <h2>タグ</h2>
+  </div>
+  <div class="row" class="py-1">
+    <p>{{employee.tag}}</p>
+    {% endif %}
+  </div>
+  <div class="row" class="py-1">
+    <a href="{{employee.mail}}"><p class="card-text"><small class="text-muted">{{employee.mail}}</small></p></a>
+  </div>
+
+
+
+
+  {% if employee.introduction_1 %}
+  <h2>社歴</h2>
+  <p>{{employee.introduction_1 | linebreaksbr | linebreaks}}</p>
+  {% endif %}
+  {% if employee.introduction_2 %}
+  <h2>アピール</h2>
+  <p>{{employee.introduction_2 | linebreaksbr | linebreaks}}</p>
+  {% endif %}
+  {% if employee.introduction_3 %}
+  <h2>目標</h2>
+  <p>{{employee.introduction_3 | linebreaksbr | linebreaks}}</p>
+  {% endif %}
+</div>
+</div>
 </div>
 
 
