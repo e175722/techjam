@@ -24,7 +24,7 @@
   </div>
   <div class="row" class="py-1">
     <div class="col-md-1"></div>
-    <a href="{{employee.mail}}"><p class="card-text"><small class="text-muted">{{employee.mail}}</small></p></a>
+    <a href="{{employee.mail}}" target="_blank"><p class="card-text"><small class="text-muted">Telma</small></p></a>
     <div class="col-md-1"></div>
   </div>
   <div class="row" class="py-1">
@@ -77,6 +77,6 @@
   </div>
 </div>
 
-<p class="text-center"><a href="{% url 'webapp:index'%}"><button type="button" class="btn btn-primary">TOPへ</button></a></p>
+<p class="text-center"><a href="javascript:history.back();"><button type="button" class="btn btn-primary">前へ戻る</button></a></p>
 
 {% endblock %}
