@@ -8,7 +8,7 @@
   <div class="row">
     <div class="col-md-1"></div>
     <div class="col-md-10">
-        <img class="card-img-top" src="/static/image/profile/{{employee.employee_id}}/1.jpg" class="mw-100" alt="">
+        <img class="card-img-top" src="/static/image/{{employee.img_url}}" class="mw-100" alt="">
     </div>
     <div class="col-md-1"></div>
   </div>
@@ -24,11 +24,6 @@
   </div>
   <div class="row" class="py-1">
     <div class="col-md-1"></div>
-    <p>{{employee.introduction.1}}</p>
-    <div class="col-md-1"></div>
-  </div>
-  <div class="row" class="py-1">
-    <div class="col-md-1"></div>
     <a href="{{employee.mail}}"><p class="card-text"><small class="text-muted">{{employee.mail}}</small></p></a>
     <div class="col-md-1"></div>
   </div>
@@ -39,7 +34,7 @@
   </div>
   <div class="row" class="py-1">
     <div class="col-md-1"></div>
-    {% if employee.introduction_1 %}
+    {% if employee.tag %}
     <p>{{employee.tag}}</p>
     {% endif %}
     <div class="col-md-1"></div>
