@@ -1,0 +1,34 @@
+{% extends 'webapp/base.html' %}
+
+{% block content %}
+<table class="table">
+  <thead>
+    <tr>
+      <th>名前</th>
+      <th>社員ID</th>
+      <th>#</th>
+    </tr>
+  </thead>
+  <tbody>
+{% for employee in employee_list %}
+<tr>
+  <td><a href="{% url 'webapp:update' employee.pk %}">{{employee.name}}</a></td>
+  <td>{{employee.employee_id}}</td>
+  <td><a href="{% url 'webapp:delete' employee.pk %}">削除</a></td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+
+{% if page_obj.has_previous %}
+<p class="text-center"><a href="?page={{page_obj.previous_page_number}}"><button type="button" class="btn btn-primary"><</button></a></p>
+{% endif %}
+
+<!-- 次へ部分へ -->
+{% if page_obj.has_next %}
+<p class="text-center"><a href="?page={{page_obj.next_page_number}}"><button type="button" class="btn btn-primary">></button></a></p>
+{% endif %}
+
+<a class="nav-link" href="{% url 'webapp:add' %}">追加</a>
+
+{% endblock %}

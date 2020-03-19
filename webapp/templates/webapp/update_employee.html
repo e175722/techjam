@@ -5,11 +5,11 @@
 <title>ファイルアップロード</title>
 </head>
 <body>
-    <h1>追加</h1>
+    <h1>編集</h1>
     <form method="POST" enctype="multipart/form-data">
       {% csrf_token %}
       {{ form.as_p }}
-      <button type="submit"　class="btn btn-primary">アップロード</button>
+      <button type="submit">アップロード</button>
     </form>
 </body>
 </html>

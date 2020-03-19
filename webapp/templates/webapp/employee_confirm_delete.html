@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="CONTENT-TYPE" content="text/html; charset=utf-8" />
+<title>削除画面</title>
+</head>
+<body>
+    <h1>削除画面</h1>
+    <form action="" method="POST">
+<table class="table">
+  <tr>
+    <th>名前</th>
+    <td>{{employee.name}}</td>
+  </tr>
+  <tr>
+    <th>社員id</th>
+    <td>{{employee.employee_id}}</td>
+  </tr>
+  <tr>
+    <th>タグ</th>
+    <td>{{employee.tag}}</td>
+  </tr>
+</table>
+<p>こちらのデータを削除します</p>
+<button type="submit" class="btn btn-primary">削除</button>
+{% csrf_token %}
+</form>
+</body>
+</html>
